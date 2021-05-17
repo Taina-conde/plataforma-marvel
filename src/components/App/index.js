@@ -1,9 +1,13 @@
 import Navbar from './Navbar';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 function App() {
   return (
-    <Navbar/>
+    <Router>
+      <Navbar/>
+    </Router>
+    
   );
 }
 
