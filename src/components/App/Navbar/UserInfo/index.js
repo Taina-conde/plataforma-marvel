@@ -1,14 +1,15 @@
 import LogOut from "./LogOut";
 import ProfilePicture from "./ProfilePicture";
+import Wrapper from '../../../shared/Wrapper';
 
 const UserInfo = () => {
   return (
-    <div>
+    <Wrapper>
       <ProfilePicture />
       <LogOut>
           Sair
       </LogOut>
-    </div>
+    </Wrapper>
   );
 };
 export default UserInfo;
