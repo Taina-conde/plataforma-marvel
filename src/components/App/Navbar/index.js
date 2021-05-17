@@ -1,8 +1,10 @@
+import Logo from './Logo';
 import StyledNav from './StyledNav';
 import StyledNavLink from './StyledNavLink';
 const Navbar = () => {
     return (
         <StyledNav>
+            <Logo/>
             <StyledNavLink to = '/'>
                 Personagens
             </StyledNavLink>
