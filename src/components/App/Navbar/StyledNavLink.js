@@ -11,5 +11,6 @@ const StyledNavLink = styled(NavLink)`
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 0.25;
+  text-decoration: none;
 `;
 export default StyledNavLink;
