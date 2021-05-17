@@ -1,4 +1,7 @@
-import Wrapper from '../../../shared/Wrapper';
+import React from 'react';
+import Wrapper from '../../../shared/Wrapper/'
+
+
 import StyledNavLink from './StyledNavLink';
 const Links = () => {
     return (

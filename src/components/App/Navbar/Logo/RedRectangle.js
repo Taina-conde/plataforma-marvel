@@ -1,8 +1,6 @@
-import styled  from "styled-components";
+import styled from "styled-components";
 
 const RedRectangle = styled.div`
-  top: 31px;
-  left: 55px;
   width: 122px;
   height: 54px;
   background: var(--unnamed-color-ff0000) 0% 0% no-repeat padding-box;

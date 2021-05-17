@@ -1,6 +1,8 @@
+import React from 'react';
 import LogOut from "./LogOut";
 import ProfilePicture from "./ProfilePicture";
-import Wrapper from '../../../shared/Wrapper';
+import Wrapper from '../../../shared/Wrapper/';
+
 
 const UserInfo = () => {
   return (

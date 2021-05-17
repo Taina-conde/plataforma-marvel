@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const LogOut = styled.button`
+display: inline;
   text-align: left;
   font: normal normal 300 20px/24px Axiforma;
   letter-spacing: 0px;
@@ -8,5 +9,6 @@ const LogOut = styled.button`
   opacity: 0.25;
   font-size: 20px;
   border: none;
+  background: none;
 `;
 export default LogOut;
