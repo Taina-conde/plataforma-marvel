@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import picture from '../../../../utils/assets/img/profile-picture.png';
+import picture from '../../../../utils/assets/img/profile-picture@2x.png';
 
 
 const ProfilePicture = styled.div`
