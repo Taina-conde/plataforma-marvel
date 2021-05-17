@@ -9,5 +9,6 @@ const RedRectangle = styled.div`
   font: normal normal normal 50px/60px Marvel;
   letter-spacing: 0px;
   color: #ffffff;
+  text-align: center;
 `;
 export default RedRectangle;
