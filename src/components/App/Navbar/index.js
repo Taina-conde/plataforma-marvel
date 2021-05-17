@@ -1,6 +1,7 @@
 import Logo from './Logo';
 import StyledNav from './StyledNav';
 import StyledNavLink from './StyledNavLink';
+import UserInfo from './UserInfo';
 const Navbar = () => {
     return (
         <StyledNav>
@@ -14,6 +15,7 @@ const Navbar = () => {
             <StyledNavLink to = '/hqs'>
                 HQs
             </StyledNavLink>
+            <UserInfo/>
         </StyledNav>
     )
 } 
