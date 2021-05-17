@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: "Marvel";
+  src: local("Marvel"),
+    url('./utils/assets/fonts/MarvelRegular-Dj83.ttf') format("truetype");
+  font-weight: normal;
+}
+/*TODO: add font-face for Axiforma*/

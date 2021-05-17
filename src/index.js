@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import './utils/assets/fonts/MarvelRegular-Dj83.ttf';
+//import './utils/assets/fonts/Axiforma';
 
 ReactDOM.render(
   <React.StrictMode>
