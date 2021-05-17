@@ -8,5 +8,9 @@ const StyledNavLink = styled(NavLink)`
   color: #ffffff;
   opacity: 0.25;
   text-decoration: none;
+  &.active {
+      opacity: 1;
+  }
+  
 `;
 export default StyledNavLink;

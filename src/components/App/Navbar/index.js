@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <StyledNav>
             <Logo/>
-            <StyledNavLink to = '/'>
+            <StyledNavLink to = '/' exact>
                 Personagens
             </StyledNavLink>
             <StyledNavLink to = '/filmes'>
