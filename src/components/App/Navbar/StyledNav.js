@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 const StyledNav = styled.nav`
 top: -4px;
 left: -17px;
