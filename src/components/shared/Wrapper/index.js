@@ -9,8 +9,10 @@ const Wrapper = (props) => {
 
   return (
     <StyledWrapper>
-      {contentArr.map((item) => {
-        return <Card key={contentObj[item].nome} cardContent = {contentObj[item]}>{contentObj[item].nome}</Card>;
+      {contentArr.map((item, index) => {
+        if (index < 3) {
+            return <Card key={contentObj[item].nome} cardContent = {contentObj[item]}>{contentObj[item].nome}</Card>;
+        }
       })}
     </StyledWrapper>
   );
