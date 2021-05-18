@@ -1,8 +1,7 @@
 export const TOGGLE_LOGGED = 'TOGGLE_LOGGED';
 
-export function toggleLogged(isLogged) {
+export function toggleLogged() {
     return {
-        type: TOGGLE_LOGGED,
-        isLogged
+        type: TOGGLE_LOGGED
     }
 } 
