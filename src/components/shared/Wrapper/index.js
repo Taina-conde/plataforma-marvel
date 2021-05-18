@@ -26,7 +26,7 @@ const Wrapper = (props) => {
             </Card>
           );
         })}
-      <NextButton onClick = {nextHandler}/>
+      {end < contentArr.length && <NextButton onClick = {nextHandler}/>}
     </StyledWrapper>
   );
 };
