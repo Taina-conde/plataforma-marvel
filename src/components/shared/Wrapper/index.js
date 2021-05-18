@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import Card from "../Card";
 import StyledWrapper from "./StyledWrapper";
+import NextButton from "./NextButton";
 
 const Wrapper = (props) => {
   const { contentType } = props;
@@ -9,11 +10,16 @@ const Wrapper = (props) => {
 
   return (
     <StyledWrapper>
-      {contentArr.map((item, index) => {
-        if (index < 3) {
-            return <Card key={contentObj[item].nome} cardContent = {contentObj[item]}>{contentObj[item].nome}</Card>;
-        }
-      })}
+      {contentArr
+        .filter((item, index) => index < 3)
+        .map((item, index) => {
+          return (
+            <Card key={contentObj[item].nome} cardContent={contentObj[item]}>
+              {contentObj[item].nome}
+            </Card>
+          );
+        })}
+      <NextButton />
     </StyledWrapper>
   );
 };

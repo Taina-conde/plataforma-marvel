@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 const StyledWrapper = styled.ul`
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     overflow: hidden;
     list-style-type: none;
     @media (min-width: 1024px) {
