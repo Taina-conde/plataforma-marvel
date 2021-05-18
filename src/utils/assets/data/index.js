@@ -10,7 +10,8 @@ import thorPoster from '../img/ThorPoster@2x.png';
 import surfista from '../img/surfistaPrateadoComics@2x.png';
 import wolverine from '../img/wolverineComics@2x.png';
 import thorComics from '../img/ThorComics@2x.png';
-const data = {
+
+export default {
     personagens: {
         'Homem-Aranha': {
             nome: 'Homem-Aranha';
