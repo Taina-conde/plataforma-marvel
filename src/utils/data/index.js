@@ -1,20 +1,20 @@
-import spider from '../img/spiderImg@2x.png';
-import wanda from '../img/wandaImg@2x.png';
-import thanos from '../img/thanosImg@2x.png';
-import hulk from '../img/hulkImg@2x.png';
-import ironMan from '../img/ironManPoster@2x.png';
-import ironMan2 from '../img/ironMan2Poster@2x.png';
-import captaoAmerica from '../img/CAPoster@2x.png';
-import captaMarvel from '../img/caMarvelPoster@2x.png';
-import thorPoster from '../img/ThorPoster@2x.png';
-import surfista from '../img/surfistaPrateadoComics@2x.png';
-import wolverine from '../img/wolverineComics@2x.png';
-import thorComics from '../img/ThorComics@2x.png';
+import spider from '../assets/img/spider@2x.png';
+import wanda from '../assets/img/wandaImg@2x.png';
+import thanos from '../assets/img/thanosImg@2x.png';
+import hulk from '../assets/img/hulkImg@2x.png';
+import ironMan from '../assets/img/ironManPoster@2x.png';
+import ironMan2 from '../assets/img/ironMan2Poster@2x.png';
+import captaoAmerica from '../assets/img/CAPoster@2x.png';
+import captaMarvel from '../assets/img/caMarvelPoster@2x.png';
+import thorPoster from '../assets/img/ThorPoster@2x.png';
+import surfista from '../assets/img/surfistaPrateadoComics@2x.png';
+import wolverine from '../assets/img/wolverineComics@2x.png';
+import thorComics from '../assets/img/ThorComics@2x.png';
 
 export default {
     personagens: {
         'Homem-Aranha': {
-            nome: 'Homem-Aranha';
+            nome: 'Homem-Aranha',
             descricao: 'Após ser mordido por uma aranha radioativa, Peter Parker se torna o amigo da vizinhança, o Homem-Aranha.',
             aparicoes: ['Spiderverse', 'Homecomming', 'The Amazing Spiderman'],
             avaliacao: 4.5,
@@ -59,7 +59,7 @@ export default {
             lancamento: 2010,
             cronologia: 2011,
             critica: 3,
-            imgUrl: ironMan
+            imgUrl: ironMan2
 
         },
         'Thor' : {
@@ -102,7 +102,7 @@ export default {
             nome: 'Surfista Prateado: Parábola',
             descricao: 'O único oponente do Devorador de Mundos é o herói que ele aprisionou na Terra: o Surfista Prateado, Galactus jurou não consumir o planeta, mas e se, em vez disso, ele transformar a civilização em seus adoradores?',
             imgUrl: surfista
-        }
+        },
         'Wolverine: Origens' : {
             nome: 'Wolverine: Origens',
             descricao: 'Origem é uma minissérie em quadrinhos publicada pela Marvel Comics em seis edições, entre 2001 e 2002. A história conta a revelação do passado do personagem Wolverine. ',
