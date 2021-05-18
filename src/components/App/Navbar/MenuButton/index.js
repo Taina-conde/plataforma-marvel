@@ -2,10 +2,10 @@ import StyledMenuButton from './StyledMenuButton';
 import { BiMenu } from "react-icons/bi";
 
 
-const MenuButton = ()=> {
+const MenuButton = (props)=> {
 
     return (
-        <StyledMenuButton>
+        <StyledMenuButton onClick = {props.onClick}>
             <BiMenu size={40} />
         </StyledMenuButton>
     )

@@ -1,8 +1,8 @@
 import StyledSidebar from './StyledSidebar';
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
-        <StyledSidebar>
-            
+        <StyledSidebar toggleSidebar = {props.toggleSidebar}>
+            {props.children}
         </StyledSidebar>
     )
 }
