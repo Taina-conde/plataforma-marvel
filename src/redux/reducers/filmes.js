@@ -5,7 +5,7 @@ export default function filmesReducer( state = {}, action) {
         case RECEIVE_FILMES:
             return {
                 ...state,
-                ...action.personagens
+                ...action.filmes
             }
         default:
             return state
