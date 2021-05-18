@@ -12,7 +12,7 @@ const Wrapper = (props) => {
     <StyledWrapper>
       {contentArr
         .filter((item, index) => index < 3)
-        .map((item, index) => {
+        .map((item) => {
           return (
             <Card key={contentObj[item].nome} cardContent={contentObj[item]}>
               {contentObj[item].nome}

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const StyledWrapper = styled.ul`
     display: flex;
     height: 100vh;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
