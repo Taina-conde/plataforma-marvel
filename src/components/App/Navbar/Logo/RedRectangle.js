@@ -10,5 +10,6 @@ const RedRectangle = styled.div`
   letter-spacing: 0px;
   color: #ffffff;
   text-align: center;
+  align-self: center;
 `;
 export default RedRectangle;
