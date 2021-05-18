@@ -1,12 +1,16 @@
+import { useSelector } from "react-redux";
 import Card from "../Card";
 import StyledWrapper from "./StyledWrapper";
 
 const Wrapper = (props) => {
-  const { content } = props;
+  const { contentType } = props;
+  const contentObj = useSelector((state) => state[contentType]);
+  const contentArr = Object.keys(contentObj);
+
   return (
     <StyledWrapper>
-      {content.map((item) => {
-        return <Card key = {item.name}>{item.name}</Card>;
+      {contentArr.map((item) => {
+        return <Card key={contentObj[item].nome}>{contentObj[item].nome}</Card>;
       })}
     </StyledWrapper>
   );

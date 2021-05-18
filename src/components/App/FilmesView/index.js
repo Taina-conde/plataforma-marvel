@@ -1,12 +1,6 @@
-import { useSelector } from 'react-redux';
-import Wrapper from '../../shared/Wrapper/';
+import Wrapper from "../../shared/Wrapper/";
 
 const FilmesView = () => {
-    const filmes = useSelector(state => state.filmes)
-    const filmesArr = Object.keys(filmes);
-    return (
-        <Wrapper content = {filmesArr}/>
-            
-    )
-}
+  return <Wrapper contentType="filmes" />;
+};
 export default FilmesView;

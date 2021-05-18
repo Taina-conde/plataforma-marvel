@@ -1,12 +1,6 @@
-import { useSelector } from 'react-redux';
-import Wrapper from '../../shared/Wrapper/';
+import Wrapper from "../../shared/Wrapper/";
 
 const HqsView = () => {
-    const hqs = useSelector(state => state.hqs);
-    const hqsArr = Object.keys(hqs);
-    return (
-        <Wrapper content = {hqsArr}/>
-         
-    )
-}
+  return <Wrapper contentType="hqs" />;
+};
 export default HqsView;
