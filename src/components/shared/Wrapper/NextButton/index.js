@@ -1,8 +1,8 @@
 import StyledNextButton from "./StyledNextButton";
 import { FaArrowRight } from "react-icons/fa";
-const NextButton = () => {
+const NextButton = (props) => {
     return (
-        <StyledNextButton>
+        <StyledNextButton onClick = {props.onClick}>
             <FaArrowRight size ={60} color = "#FF0000"/>
         </StyledNextButton>
     )
