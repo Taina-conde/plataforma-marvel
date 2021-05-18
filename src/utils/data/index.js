@@ -11,7 +11,7 @@ import surfista from '../assets/img/surfistaPrateadoComics@2x.png';
 import wolverine from '../assets/img/wolverineComics@2x.png';
 import thorComics from '../assets/img/ThorComics@2x.png';
 
-export default {
+const data =  {
     personagens: {
         'Homem-Aranha': {
             nome: 'Homem-Aranha',
@@ -110,3 +110,4 @@ export default {
         }
     }
 }
+export default data;
