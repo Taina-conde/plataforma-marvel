@@ -10,7 +10,7 @@ const Wrapper = (props) => {
   return (
     <StyledWrapper>
       {contentArr.map((item) => {
-        return <Card key={contentObj[item].nome}>{contentObj[item].nome}</Card>;
+        return <Card key={contentObj[item].nome} cardContent = {contentObj[item]}>{contentObj[item].nome}</Card>;
       })}
     </StyledWrapper>
   );
