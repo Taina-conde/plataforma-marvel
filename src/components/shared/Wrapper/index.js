@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import Card from "../Card";
 import StyledWrapper from "./StyledWrapper";
-import NextButton from "./NextButton";
+import SliderButton from "./SliderButton";
 
 const Wrapper = (props) => {
   const [ start, setStart ] = useState(0);
@@ -14,9 +14,14 @@ const Wrapper = (props) => {
     setStart(start + 1)
     setEnd(end + 1)
   }
+  const prevHandler = () => {
+    setStart(start - 1)
+    setEnd(end - 1)
+  }
 
   return (
     <StyledWrapper>
+      {start > 0 && <SliderButton onClick = {prevHandler} direction = "left"/>}
       {contentArr
         .filter((item, index) => (index >= start && index < end))
         .map((item) => {
@@ -26,7 +31,7 @@ const Wrapper = (props) => {
             </Card>
           );
         })}
-      {end < contentArr.length && <NextButton onClick = {nextHandler}/>}
+      {end < contentArr.length && <SliderButton onClick = {nextHandler} direction = "right"/>}
     </StyledWrapper>
   );
 };
