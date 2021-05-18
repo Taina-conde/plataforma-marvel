@@ -12,5 +12,8 @@ const StyledSidebar = styled.div`
   padding: 2rem 1rem 1rem 1rem;
   background-color: #1a1a1a;
   z-index: 9999;
+  @media (min-width: 768px) {
+      display: none;
+  }
 `;
 export default StyledSidebar;

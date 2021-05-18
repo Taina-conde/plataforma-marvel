@@ -6,6 +6,7 @@ import UserInfo from './UserInfo';
 import MenuButton from './MenuButton';
 import Collapse from './Collapse';
 import Sidebar from './Sidebar';
+import CloseButton from '../../shared/CloseButton';
 const Navbar = () => {
     const [toggleSidebar, setToggleSidebar] = useState(false);
     return (
@@ -17,6 +18,7 @@ const Navbar = () => {
                 <UserInfo/>
             </Collapse> 
             <Sidebar toggleSidebar= {toggleSidebar}>
+                <CloseButton onClick = {() => setToggleSidebar(!toggleSidebar)}/>
                 <Links/>
                 <UserInfo/>
             </Sidebar>   

@@ -1,17 +1,17 @@
 import React from 'react';
 import LogOut from "./LogOut";
 import ProfilePicture from "./ProfilePicture";
-import Wrapper from '../../../shared/Wrapper/';
+import StyledUserInfo from './StyledUserInfo';
 
 
 const UserInfo = () => {
   return (
-    <Wrapper>
+    <StyledUserInfo>
       <ProfilePicture />
       <LogOut>
           Sair
       </LogOut>
-    </Wrapper>
+    </StyledUserInfo>
   );
 };
 export default UserInfo;
