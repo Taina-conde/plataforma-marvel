@@ -2,11 +2,8 @@ export const RECEIVE_PERSONAGENS = "RECEIVE_PERSONAGENS";
 
 export function handleReceivePersonagens(personagens) {
   return (dispatch) => {
-    return localStorage
-      .setItem("personagens", personagens)
-      .then(() => {
-        dispatch(receivePersonagens(personagens));
-      });
+    localStorage.setItem("personagens", personagens);
+    dispatch(receivePersonagens(personagens));
   };
 }
 function receivePersonagens(personagens) {

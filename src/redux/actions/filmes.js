@@ -2,11 +2,9 @@ export const RECEIVE_FILMES = "RECEIVE_FILMES";
 
 export function handleReceiveFilmes(filmes) {
   return (dispatch) => {
-    return localStorage
-      .setItem("filmes", filmes)
-      .then(() => {
-        dispatch(receiveFilmes(filmes));
-      });
+    localStorage.setItem("filmes", filmes);
+    dispatch(receiveFilmes(filmes));
+    return;
   };
 }
 function receiveFilmes(filmes) {
