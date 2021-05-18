@@ -1,13 +1,11 @@
-import styled from 'styled-components';
+import StyledMenuButton from './StyledMenuButton';
 
-const MenuButton = styled.button`
-    border: 1 px solid #ffffff;
-    color: #ffffff;
-    opacity: 0.25;
-    padding: 15px;
-    border-radius: 10px;
-    @media (min-width: 768px) {
-        display: none;
-    }
-`
+const MenuButton = ()=> {
+
+    return (
+        <StyledMenuButton>
+            icon
+        </StyledMenuButton>
+    )
+}
 export default MenuButton;
