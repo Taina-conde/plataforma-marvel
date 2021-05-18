@@ -1,10 +1,10 @@
 import StyledCard from './StyledCard';
 
 
-const Card = () => {
+const Card = (props) => {
     return (
         <StyledCard>
-            PERSONAGEM 
+            {props.children}
         </StyledCard>
     )
 }

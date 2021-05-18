@@ -1,10 +1,10 @@
 import Wrapper from '../../shared/Wrapper/';
 import Card from '../../shared/Card/'
-const PersonagensView = () => {
+const FilmesView = () => {
     return (
         <Wrapper>
-            <Card>PERSONAGENS</Card>
+            <Card>FILMES</Card>
         </Wrapper>
     )
 }
-export default PersonagensView;
+export default FilmesView;
