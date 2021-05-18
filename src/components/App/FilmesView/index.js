@@ -1,10 +1,12 @@
+import { useSelector } from 'react-redux';
 import Wrapper from '../../shared/Wrapper/';
-import Card from '../../shared/Card/'
+
 const FilmesView = () => {
+    const filmes = useSelector(state => state.filmes)
+    const filmesArr = Object.keys(filmes);
     return (
-        <Wrapper>
-            <Card>FILMES</Card>
-        </Wrapper>
+        <Wrapper content = {filmesArr}/>
+            
     )
 }
 export default FilmesView;

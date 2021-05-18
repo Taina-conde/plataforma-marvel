@@ -1,10 +1,12 @@
+import { useSelector } from 'react-redux';
 import Wrapper from '../../shared/Wrapper/';
-import Card from '../../shared/Card/'
+
 const HqsView = () => {
+    const hqs = useSelector(state => state.hqs);
+    const hqsArr = Object.keys(hqs);
     return (
-        <Wrapper>
-            <Card>HQS</Card>
-        </Wrapper>
+        <Wrapper content = {hqsArr}/>
+         
     )
 }
 export default HqsView;
