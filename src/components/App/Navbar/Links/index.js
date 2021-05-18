@@ -1,11 +1,11 @@
 import React from 'react';
-import Wrapper from '../../../shared/Wrapper/'
+import NavLinkGroup from './NavLinkGroup';
 
 
 import StyledNavLink from './StyledNavLink';
 const Links = () => {
     return (
-        <Wrapper>
+        <NavLinkGroup>
             <StyledNavLink to = '/' exact>
                 Personagens
             </StyledNavLink>
@@ -15,7 +15,7 @@ const Links = () => {
             <StyledNavLink to = '/hqs'>
                 HQs
             </StyledNavLink>
-        </Wrapper>
+        </NavLinkGroup>
     )
 }
 export default Links;
