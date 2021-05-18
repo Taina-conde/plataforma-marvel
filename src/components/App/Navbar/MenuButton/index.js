@@ -6,5 +6,8 @@ const MenuButton = styled.button`
     opacity: 0.25;
     padding: 15px;
     border-radius: 10px;
+    @media (min-width: 768px) {
+        display: none;
+    }
 `
 export default MenuButton;
