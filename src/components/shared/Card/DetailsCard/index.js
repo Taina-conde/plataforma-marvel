@@ -1,10 +1,9 @@
 import StyledDetailsCard from "./StyledDetailsCard";
 import CloseButton from "../../CloseButton";
 import DetailsWrapper from "./DetailsWrapper";
-import DetailsTitle from "./DetailsTitle";
-import DetailsParagraph from "./DetailsParagraph";
-import DetailsSubtitle from "./DetailsSubtitle";
-import { useSelector } from "react-redux";
+import DetailsTitle from "./shared/DetailsTitle";
+import DetailsParagraph from "./shared/DetailsParagraph";
+import DetailsSubtitle from "./shared/DetailsSubtitle";
 
 const DetailsCard = (props) => {
     const {cardContent, displayPosition} = props;
@@ -12,13 +11,13 @@ const DetailsCard = (props) => {
     <StyledDetailsCard displayPosition = {displayPosition} {...props}>
         <DetailsWrapper displayPosition = {displayPosition}>
             <DetailsTitle>
-                {props.nome}
+                {cardContent.nome}
             </DetailsTitle>
             <DetailsSubtitle>
                 Aparições: 
             </DetailsSubtitle>
             <DetailsParagraph>
-                {props.descricao}
+                {cardContent.descricao}
             </DetailsParagraph>
             <DetailsSubtitle>
                 {} 
