@@ -18,5 +18,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
+document.body.style = 'background: black;';
 
