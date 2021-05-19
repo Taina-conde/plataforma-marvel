@@ -1,6 +1,6 @@
-import Wrapper from "../../shared/Wrapper/";
+import CardsList from "../../shared/CardsList/";
 
 const HqsView = () => {
-  return <Wrapper contentType="hqs" />;
+  return <CardsList contentType="hqs" />;
 };
 export default HqsView;

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const StyledWrapper = styled.ul`
     display: flex;
-    height: 100vh;
+    padding: 0 40px;
+    
     overflow: hidden;
     flex-direction: column;
     align-items: center;

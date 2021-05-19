@@ -1,6 +1,6 @@
-import Wrapper from "../../shared/Wrapper/";
+import CardsList from "../../shared/CardsList/";
 
 const FilmesView = () => {
-  return <Wrapper contentType="filmes" />;
+  return <CardsList contentType="filmes" />;
 };
 export default FilmesView;
