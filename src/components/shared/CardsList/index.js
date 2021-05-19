@@ -30,13 +30,17 @@ const Wrapper = (props) => {
         .map((item, index) => {
           const displayPosition = index;
           return (
-            <Card key={index} displayPosition = {displayPosition} cardContent={contentObj[item]}/> 
+            <Card
+              key={index}
+              displayPosition={displayPosition}
+              cardContent={contentObj[item]}
+            />
           );
         })}
       <BtnContainer>
-      {end < contentArr.length && (
-        <SliderButton onClick={nextHandler} direction="right" />
-      )}
+        {end < contentArr.length && (
+          <SliderButton onClick={nextHandler} direction="right" />
+        )}
       </BtnContainer>
     </StyledWrapper>
   );

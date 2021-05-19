@@ -21,15 +21,13 @@ const Card = (props) => {
         ></StyledCard>
         {showDetails === false ? (
           <MiniCard
-            descricao={cardContent.descricao}
-            nome={cardContent.nome}
+            cardContent = {cardContent}
             onClickHandler={clickHandler}
           />
         ) : (
           <DetailsCard
             displayPosition={displayPosition}
-            nome={cardContent.nome}
-            descricao={cardContent.descricao}
+            cardContent = {cardContent}
             onClickHandler={clickHandler}
             selected = {showDetails}
           />
