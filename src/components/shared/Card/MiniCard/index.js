@@ -6,13 +6,13 @@ import StyledDetailsButton from "./StyledDetailsButton";
 
 
 const MiniCard = (props) => {
-  const { nome, descricao } = props;
+  const { nome, descricao, onClickDetailsHandler } = props;
   
     return (
     <StyledMiniCard>
       <StyledTitle>{nome}</StyledTitle>
       <StyledParagraph>{descricao}</StyledParagraph>
-      <StyledDetailsButton onClick = {() => clickDetailsHandler()}>ver detalhes</StyledDetailsButton>
+      <StyledDetailsButton onClick = {() => onClickDetailsHandler()}>ver detalhes</StyledDetailsButton>
     </StyledMiniCard>
   );
 };
