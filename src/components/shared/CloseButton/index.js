@@ -3,7 +3,7 @@ import StyledCloseButton from './StyledCloseButton';
 
 const CloseButton = (props) => {
     return (
-        <StyledCloseButton onClick = {props.onClick}>
+        <StyledCloseButton onClick = {props.onClick} {...props}>
             <IoCloseCircleOutline size= {35}/> 
         </StyledCloseButton>
     )
