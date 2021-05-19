@@ -18,10 +18,13 @@ const LogInView = () => {
     setRememberMe(value);
   };
 
-
+  const submitHandler = (event) => {
+      event.preventDefault();
+      localStorage.setItem('rememberMe', rememberMe);
+  }
 
   return (
-    <StyledLogIn>
+    <StyledLogIn onSubmit = {submitHandler}>
       <Logo />
       <Title>Bem-vindo(a) de volta!</Title>
       <Label>Acesse sua conta:</Label>
