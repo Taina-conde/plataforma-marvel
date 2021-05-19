@@ -31,7 +31,7 @@ const Card = (props) => {
         
       )}
     </StyledCard>
-    {showDetails && <Overlay/>}
+    {showDetails && <Overlay onClick = {() => clickHandler()}/>}
     </>
   );
 };
