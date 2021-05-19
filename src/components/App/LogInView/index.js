@@ -6,9 +6,12 @@ import Row from "./Row";
 import SecondaryButton from "./SecondaryButton";
 import PrimaryButton from "./PrimaryButton";
 import InputGroup from "./InputGroup";
+import Logo from "../../shared/Logo";
+
 const LogInView = () => {
   return (
     <StyledLogIn>
+      <Logo />
       <Title>Bem-vindo(a) de volta!</Title>
       <Label>Acesse sua conta:</Label>
       <Input placeholder="Usuário" type="text" />
@@ -22,8 +25,8 @@ const LogInView = () => {
       </Row>
       <PrimaryButton>Entrar</PrimaryButton>
       <Row>
-          <Label>Ainda não tem o login?</Label>
-          <SecondaryButton cadastro>Cadastre-se</SecondaryButton>
+        <Label>Ainda não tem o login?</Label>
+        <SecondaryButton cadastro>Cadastre-se</SecondaryButton>
       </Row>
     </StyledLogIn>
   );
