@@ -12,6 +12,7 @@ const StyledWrapper = styled.ul`
     list-style-type: none;
     @media (min-width: 1024px) {
         flex-direction: row;
+        margin-top: 100px;
     }
     
    
