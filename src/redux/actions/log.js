@@ -1,7 +1,9 @@
-export const TOGGLE_LOGGED = 'TOGGLE_LOGGED';
+export const SET_LOGGED = 'SET_LOGGED';
 
-export function toggleLogged() {
+export function setLogged(loggedIn) {
     return {
-        type: TOGGLE_LOGGED
+        type: SET_LOGGED,
+        loggedIn
+
     }
 } 
