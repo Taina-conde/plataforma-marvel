@@ -27,11 +27,10 @@ const Wrapper = (props) => {
       </BtnContainer>
       {contentArr
         .filter((item, index) => index >= start && index < end)
-        .map((item) => {
+        .map((item, index) => {
+          const displayPosition = index;
           return (
-            <Card key={contentObj[item].nome} cardContent={contentObj[item]}>
-              {contentObj[item].nome}
-            </Card>
+            <Card key={index} displayPosition = {displayPosition} cardContent={contentObj[item]}/> 
           );
         })}
       <BtnContainer>
