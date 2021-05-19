@@ -8,5 +8,6 @@ background: transparent url(${props => props.backgroundImg}) 0% 0% no-repeat pad
 border-radius: 30px;
 opacity: 1;
 position: relative;
+
 `
 export default StyledCard;

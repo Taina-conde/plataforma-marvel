@@ -2,6 +2,7 @@ import { useState } from "react";
 import StyledCard from "./StyledCard";
 import MiniCard from "./MiniCard";
 import DetailsCard from "./DetailsCard";
+import Overlay from "./Overlay";
 
 const Card = (props) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -11,7 +12,8 @@ const Card = (props) => {
   };
 
   return (
-    <StyledCard backgroundImg={cardContent.imgUrl}>
+    <>
+    <StyledCard backgroundImg={cardContent.imgUrl} selected = {showDetails}>
       {showDetails === false ? (
         <MiniCard
           descricao={cardContent.descricao}
@@ -19,14 +21,18 @@ const Card = (props) => {
           onClickHandler={clickHandler}
         />
       ) : (
+        
         <DetailsCard 
             displayPosition = {displayPosition}
             nome = {cardContent.nome}
             descricao = {cardContent.descricao}
             onClickHandler = {clickHandler}
         />
+        
       )}
     </StyledCard>
+    {showDetails && <Overlay/>}
+    </>
   );
 };
 export default Card;

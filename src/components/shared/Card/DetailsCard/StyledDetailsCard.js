@@ -10,6 +10,7 @@ opacity: 1;
 position: absolute;
 top: 0;
 ${props => props.displayPosition === 0 ? "left: 0;" : "right: 0;"}
+z-index: 999;
 `
 
 export default StyledDetailsCard;
