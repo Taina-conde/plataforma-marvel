@@ -40,6 +40,7 @@ const DetailsInfo = () => {
           <DetailsParagraph>{card.descricao}</DetailsParagraph>
           <DetailsParagraph>Disponível para compra: </DetailsParagraph>
           <AppImg app = {americanas} alt = "americanas"/><AppImg app = {amazon} alt = "amazon"/>
+          <DetailsSubtitle>Crítica</DetailsSubtitle>
           </>
       )}
     </>
