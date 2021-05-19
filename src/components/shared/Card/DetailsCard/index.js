@@ -1,21 +1,17 @@
 import StyledDetailsCard from "./StyledDetailsCard";
 import CloseButton from "../../CloseButton";
 import DetailsWrapper from "./DetailsWrapper";
-import { useSelector } from "react-redux";
-
+import DetailsInfo from "./DetailsInfo";
 
 const DetailsCard = (props) => {
-  const category = useSelector( state => state.selectedCard.category)
-    const {displayPosition} = props;
-    console.log('category', category)
+
+  const { displayPosition, selected } = props;
   return (
-    <StyledDetailsCard displayPosition = {displayPosition} {...props}>
-        <DetailsWrapper displayPosition = {displayPosition}>
-          
-
-
-        </DetailsWrapper>
-      <CloseButton onClick={() => props.onClickHandler()} details/>
+    <StyledDetailsCard displayPosition={displayPosition} selected={selected}>
+      <DetailsWrapper displayPosition={displayPosition}>
+       <DetailsInfo/>
+      </DetailsWrapper>
+      <CloseButton onClick={() => props.onClickHandler()} details />
     </StyledDetailsCard>
   );
 };
