@@ -8,9 +8,11 @@ import data from "../../utils/data";
 import { handleReceivePersonagens } from "../../redux/actions/personagens";
 import { handleReceiveFilmes } from "../../redux/actions/filmes";
 import { handleReceiveHqs } from "../../redux/actions/hqs";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import LogInView from "./LogInView";
 
 function App() {
+  const loggedIn = useSelector((state) => state.loggedIn);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(handleReceiveFilmes(data.filmes));
@@ -19,12 +21,19 @@ function App() {
   }, [dispatch]);
   return (
     <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/" exact component={PersonagensView} />
-        <Route path="/filmes" component={FilmesView} />
-        <Route path="/hqs" component={HqsView} />
-      </Switch>
+      {loggedIn ? (
+        <>
+          <Navbar />
+          <Switch>
+            <Route path="/personagens" component={PersonagensView} />
+            <Route path="/filmes" component={FilmesView} />
+            <Route path="/hqs" component={HqsView} />
+          </Switch>
+        </>
+      ) : (
+        <Route path="/" exact component={LogInView} />
+      )}
+      
     </Router>
   );
 }
