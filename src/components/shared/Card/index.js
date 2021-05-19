@@ -17,6 +17,7 @@ const Card = (props) => {
   };
 
   const clickDetailsHandler = () => {
+    console.log('contentType inside card', contentType)
     dispatch(selectCard(contentType, cardContent));
     clickHandler();
   };
