@@ -34,6 +34,7 @@ const Wrapper = (props) => {
               key={index}
               displayPosition={displayPosition}
               cardContent={contentObj[item]}
+              contentType = {contentType}
             />
           );
         })}

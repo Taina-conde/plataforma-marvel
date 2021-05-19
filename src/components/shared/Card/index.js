@@ -4,12 +4,21 @@ import MiniCard from "./MiniCard";
 import DetailsCard from "./DetailsCard";
 import Overlay from "./Overlay";
 import Wrapper from "./Wrapper";
+import { useDispatch } from "react-redux";
+import { selectCard } from "../../../redux/actions/selectedCard";
 
 const Card = (props) => {
+  const dispatch = useDispatch();
   const [showDetails, setShowDetails] = useState(false);
-  const { cardContent, displayPosition } = props;
+  const { cardContent, displayPosition, contentType } = props;
+
   const clickHandler = () => {
     setShowDetails(!showDetails);
+  };
+
+  const clickDetailsHandler = () => {
+    dispatch(selectCard(contentType, cardContent));
+    clickHandler();
   };
 
   return (
@@ -17,19 +26,19 @@ const Card = (props) => {
       <Wrapper>
         <StyledCard
           backgroundImg={cardContent.imgUrl}
-          selected = {showDetails}
+          selected={showDetails}
         ></StyledCard>
         {showDetails === false ? (
           <MiniCard
-            cardContent = {cardContent}
-            onClickHandler={clickHandler}
+            cardContent={cardContent}
+            onClickDetailsHandler={clickDetailsHandler}
           />
         ) : (
           <DetailsCard
             displayPosition={displayPosition}
-            cardContent = {cardContent}
+            cardContent={cardContent}
             onClickHandler={clickHandler}
-            selected = {showDetails}
+            selected={showDetails}
           />
         )}
       </Wrapper>
