@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Redirect } from 'react-router-dom';
 import StyledLogIn from "./StyledLogIn";
 import Title from "./Title";
 import Label from "./Label";
@@ -8,9 +10,12 @@ import SecondaryButton from "./SecondaryButton";
 import PrimaryButton from "./PrimaryButton";
 import InputGroup from "./InputGroup";
 import Logo from "../../shared/Logo";
+import { setLogged } from "../../../redux/actions/log";
 
 const LogInView = () => {
+  const [toHome, setToHome] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const dispatch = useDispatch();
 
   const changeHandler = (event) => {
     const input = event.target;
@@ -19,12 +24,17 @@ const LogInView = () => {
   };
 
   const submitHandler = (event) => {
-      event.preventDefault();
-      localStorage.setItem('rememberMe', rememberMe);
+    event.preventDefault();
+    localStorage.setItem("rememberMe", rememberMe);
+    dispatch(setLogged(true));
+    setToHome(true);
+  };
+  if (toHome) {
+      <Redirect to = '/'/>
   }
 
   return (
-    <StyledLogIn onSubmit = {submitHandler}>
+    <StyledLogIn onSubmit={submitHandler}>
       <Logo />
       <Title>Bem-vindo(a) de volta!</Title>
       <Label>Acesse sua conta:</Label>

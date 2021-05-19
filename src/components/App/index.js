@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Navbar from "./Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PersonagensView from "./PersonagensView";
@@ -12,7 +13,9 @@ import { useDispatch } from "react-redux";
 import LogInView from "./LogInView";
 
 function App() {
-  const loggedIn = localStorage.getItem("rememberMe") === "true";
+  const loggedIn = useSelector((state) => state.loggedIn)
+  
+  console.log("loggedIn", loggedIn)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,19 +23,20 @@ function App() {
     dispatch(handleReceiveHqs(data.HQs));
     dispatch(handleReceivePersonagens(data.personagens));
   }, [dispatch]);
+  
   return (
     <Router>
       {loggedIn ? (
         <>
           <Navbar />
           <Switch>
-            <Route path="/personagens" component={PersonagensView} />
+            <Route path="/" exact component={PersonagensView} />
             <Route path="/filmes" component={FilmesView} />
             <Route path="/hqs" component={HqsView} />
           </Switch>
         </>
       ) : (
-        <Route path="/" exact component={LogInView} />
+        <LogInView/>
       )}
     </Router>
   );

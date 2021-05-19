@@ -9,6 +9,6 @@ export default combineReducers({
   personagens: personagensReducer,
   filmes: filmesReducer,
   hqs: hqsReducer,
-  logged: logReducer,
+  loggedIn: logReducer,
   selectedCard: selectedCardReducer
 });
