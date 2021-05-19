@@ -10,7 +10,7 @@ const Overlay = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 998; 
+    z-index: 996; 
     transition: all 0.5s ease-in-out;
 `;
 export default Overlay;
