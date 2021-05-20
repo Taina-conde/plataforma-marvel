@@ -35,7 +35,7 @@ const LogInView = () => {
 
   return (
     <>
-    <Logo animated />
+    <Logo login />
     <StyledLogIn onSubmit={submitHandler}>
       
       <Title>Bem-vindo(a) de volta!</Title>
