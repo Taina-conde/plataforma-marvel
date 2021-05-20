@@ -12,8 +12,8 @@ const positionLeft = viewportWidth/2;
 
 export const translate = keyframes`
 0%   {top: ${positionTop}px; left: ${positionLeft}px;}
-10%   {top: ${positionTop}px; left: ${positionLeft}px;}
-40%  {top: ${positionTop}px; left: ${(positionLeft/3)}px;}
+20%   {top: ${positionTop}px; left: ${positionLeft}px;}
+50%  {top: ${positionTop}px; left: ${(positionLeft/3)}px;}
 60%  {top: ${positionTop}px; left: ${(positionLeft/3)}px;}
 100%  {top: ${positionTop/4}px; left: ${positionLeft/3}px;}
 `;
