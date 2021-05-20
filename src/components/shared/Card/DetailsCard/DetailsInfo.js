@@ -17,11 +17,11 @@ const DetailsInfo = () => {
   console.log("nome array", nome)
   return (
     <>
-      {nome.map( (item, index) => <DetailsTitle>{index === 0 ? item + ": " : item }</DetailsTitle>)}
+      {nome.map( (item, index) => <DetailsTitle key = {index}>{index === 0 ? item + ": " : item }</DetailsTitle>)}
       {category === "personagens" && (
         <>
           <DetailsSubtitle>Aparições:</DetailsSubtitle>
-          {card.aparicoes.map( aparicao => <DetailsParagraph>
+          {card.aparicoes.map( (aparicao, index) => <DetailsParagraph key = {index}>
               {aparicao}
           </DetailsParagraph>)}
           <DetailsSubtitle>Avaliações dos Fãs</DetailsSubtitle>

@@ -18,6 +18,12 @@ export const translate = keyframes`
 100%  {top: ${positionTop/4}px; left: ${positionLeft/3}px;}
 `;
 
+export const translateY = keyframes`
+0%   {top: ${positionTop}px; }
+25%   {top: ${positionTop}px; }
+100%  {top: ${positionTop/6}px;}
+`
+
 export const fadeIn = keyframes`
 0%   {opacity: 0; }
 100%  {opacity: 1;}
