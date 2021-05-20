@@ -8,7 +8,7 @@ const animationMd = css`
   ${TranslateXYAnimation} 3s ease both
 `;
 const animationSm = css`
-  ${TranslateYAnimation} 3s ease both
+  ${TranslateYAnimation} 2s ease both
 `;
 
 const RedRectangle = styled.div`
@@ -19,7 +19,6 @@ const RedRectangle = styled.div`
   color: #ffffff;
   text-align: center;
   align-self: center;
-  margin-top: 50px;
   ${(props) =>
     props.login
       ? css`

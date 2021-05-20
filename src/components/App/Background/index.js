@@ -3,8 +3,8 @@ import StyledBackground from "./StyledBackground";
 
 const Background = (props) => {
   return (
-    <StyledBackground>
-      <BackgroundImg/>
+    <StyledBackground >
+      <BackgroundImg login = {props.login}/>
       {props.children}
     </StyledBackground>
   );

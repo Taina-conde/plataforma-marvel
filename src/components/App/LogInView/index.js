@@ -11,7 +11,7 @@ import PrimaryButton from "./PrimaryButton";
 import InputGroup from "./InputGroup";
 import Logo from "../../shared/Logo";
 import { setLogged } from "../../../redux/actions/log";
-import Translate from "../../animations/Translate";
+import Background from "../Background";
 
 const LogInView = () => {
   const [toHome, setToHome] = useState(false);
@@ -35,9 +35,8 @@ const LogInView = () => {
   }
 
   return (
-    <>
-      
-        <Logo login />
+    <Background login>
+      <Logo login />
       
       <StyledLogIn onSubmit={submitHandler}>
         <Title>Bem-vindo(a) de volta!</Title>
@@ -63,7 +62,7 @@ const LogInView = () => {
           <SecondaryButton cadastro>Cadastre-se</SecondaryButton>
         </Row>
       </StyledLogIn>
-    </>
+    </Background>
   );
 };
 export default LogInView;

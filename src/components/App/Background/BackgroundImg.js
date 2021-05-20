@@ -1,12 +1,10 @@
 import styled, { css } from "styled-components";
-import { fadeIn } from "../../../utils/animations";
+import { FadeInAnimation } from "../../animations/animations";
 import backgroundImg from "../../../utils/assets/img/background@2x.png";
 
-const animation = props => css`
-  ${fadeIn} 2s ease 1s both;
-`
-
-
+const animation = (props) => css`
+  ${FadeInAnimation} 2s ease 1s both
+`;
 export const BackgroundImg = styled.div`
   @media (min-width: 1024px) {
     background-image: url(${backgroundImg});
@@ -24,8 +22,11 @@ export const BackgroundImg = styled.div`
     left: 669px;
     width: 855px;
     height: 768px;
-    animation: ${animation};
-
+    ${(props) =>
+      props.login &&
+      css`
+        animation: ${animation};
+      `}
   }
 `;
 export default BackgroundImg;
