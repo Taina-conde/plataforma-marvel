@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { translate } from "../../../utils/animations";
+
+const animation = props => css`
+  ${translate} 3s ease both;
+`
 
 const RedRectangle = styled.div`
   width: 122px;
@@ -11,5 +16,11 @@ const RedRectangle = styled.div`
   color: #ffffff;
   text-align: center;
   align-self: center;
+  margin-top: 50px;
+  @media (min-width: 1024px) {
+    position: fixed; 
+    animation:${animation};
+    margin-top: 0;
+  }
 `;
 export default RedRectangle;

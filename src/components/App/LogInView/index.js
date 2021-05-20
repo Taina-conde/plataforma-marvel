@@ -35,7 +35,7 @@ const LogInView = () => {
 
   return (
     <StyledLogIn onSubmit={submitHandler}>
-      <Logo />
+      <Logo animated />
       <Title>Bem-vindo(a) de volta!</Title>
       <Label>Acesse sua conta:</Label>
       <Input placeholder="Usuário" type="text" />
