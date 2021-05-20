@@ -6,7 +6,6 @@ const StyledBackground = styled.div`
   margin: 0;
   @media (min-width: 1024px) {
     position: relative;
-    z-index: -1;
   }
 `;
 export default StyledBackground;
