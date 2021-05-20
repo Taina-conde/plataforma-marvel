@@ -11,7 +11,7 @@ import PrimaryButton from "./PrimaryButton";
 import InputGroup from "./InputGroup";
 import Logo from "../../shared/Logo";
 import { setLogged } from "../../../redux/actions/log";
-import Background from "../Background";
+import Background from "../../shared/Background";
 
 const LogInView = () => {
   const [toHome, setToHome] = useState(false);

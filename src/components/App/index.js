@@ -12,7 +12,7 @@ import { handleReceiveHqs } from "../../redux/actions/hqs";
 import { useDispatch } from "react-redux";
 import LogInView from "./LogInView";
 import { setLogged } from "../../redux/actions/log";
-import Background from "./Background";
+import Background from "../shared/Background";
 
 function App() {
   const loggedIn = useSelector((state) => state.loggedIn);
