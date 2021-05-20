@@ -12,32 +12,41 @@ import { handleReceiveHqs } from "../../redux/actions/hqs";
 import { useDispatch } from "react-redux";
 import LogInView from "./LogInView";
 import { setLogged } from "../../redux/actions/log";
+import Background from "./Background";
 
 function App() {
   const loggedIn = useSelector((state) => state.loggedIn);
   const rememberMe = localStorage.getItem("rememberMe") === "true";
+  const navbarHeight = 114;
+  const viewportHeight = Math.max(
+    document.documentElement.clientHeight || 0,
+    window.innerHeight || 0
+  );
+  const minHeight = viewportHeight - navbarHeight;
 
   console.log("loggedIn", loggedIn);
-  console.log("rememberMe", rememberMe)
+  console.log("rememberMe", rememberMe);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(handleReceiveFilmes(data.filmes));
     dispatch(handleReceiveHqs(data.HQs));
     dispatch(handleReceivePersonagens(data.personagens));
-    dispatch(setLogged(rememberMe))
+    dispatch(setLogged(rememberMe));
   }, [dispatch]);
 
   return (
     <Router>
-      {(loggedIn || rememberMe) ? (
+      {loggedIn || rememberMe ? (
         <>
           <Navbar />
-          <Switch>
-            <Route path="/" exact component={PersonagensView} />
-            <Route path="/filmes" component={FilmesView} />
-            <Route path="/hqs" component={HqsView} />
-          </Switch>
+          <Background minHeight = {minHeight}>
+            <Switch>
+              <Route path="/" exact component={PersonagensView} />
+              <Route path="/filmes" component={FilmesView} />
+              <Route path="/hqs" component={HqsView} />
+            </Switch>
+          </Background>
         </>
       ) : (
         <LogInView />
