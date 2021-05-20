@@ -1,11 +1,10 @@
 import RedRectangle from "./RedRectangle";
 
 
-const Logo = (props) => {
-  console.log('animated: ', props.animated)
+const Logo = () => {
   return (
     
-      <RedRectangle animated = {props.animated}>MARVEL</RedRectangle>
+      <RedRectangle>MARVEL</RedRectangle>
     
   );
 };
