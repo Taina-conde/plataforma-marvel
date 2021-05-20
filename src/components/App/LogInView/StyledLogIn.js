@@ -12,10 +12,11 @@ const StyledLogIn = styled.form`
  justify-content: center;
  height: 100vh;
  position: relative;
+ animation: ${animation};
  @media (min-width: 1024px) {
-    margin-left: 65px;
-    align-items: flex-start;
-    animation: ${animation};
+    margin-left: 95px;
+    width: 430px;
+    
  }
  
 `

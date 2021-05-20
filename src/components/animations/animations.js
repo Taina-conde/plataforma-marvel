@@ -19,10 +19,10 @@ const viewportHeight = Math.max(
   
   export const TranslateXYAnimation = keyframes`  
   0%   {top: ${positionTop}px; left: ${positionLeft}px;}
-  20%   {top: ${positionTop}px; left: ${positionLeft}px;}
+  30%   {top: ${positionTop}px; left: ${positionLeft}px;}
   50%  {top: ${positionTop}px; left: ${positionLeft /3}px;}
   60%  {top: ${positionTop}px; left: ${positionLeft /3}px;}
-  100%  {top: ${positionTop /6}px; left: ${positionLeft /3}px;}
+  100%  {top: ${positionTop /5}px; left: ${positionLeft /3}px;}
   `;
   export const TranslateYAnimation = keyframes`  
   0%   {top: ${positionTop}px; left: ${positionLeft}px;}
