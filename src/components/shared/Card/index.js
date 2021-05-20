@@ -40,6 +40,7 @@ const Card = (props) => {
             displayPosition={displayPosition}
             onClickHandler={clickHandler}
             selected={showDetails}
+            backgroundImg={cardContent.imgUrl}
           />
         )}
       </Wrapper>

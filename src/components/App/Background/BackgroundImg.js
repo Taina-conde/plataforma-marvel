@@ -14,7 +14,7 @@ export const BackgroundImg = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 669px;
     width: 855px;
     height: 768px;

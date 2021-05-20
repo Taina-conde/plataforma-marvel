@@ -93,7 +93,7 @@ const data =  {
     },
     HQs: {
         'Thor: Vikings' : {
-            nome: 'Thor Vikings',
+            nome: 'Thor: Vikings',
             descricao:'Garth Ennis e sua violência atacam novamente na HQ que leva a violência das histórias de Thor ao limite! Na minissérie de 2003 vemos vikings de um passado distante voltando a vida.',
             imgUrl: thorComics
 

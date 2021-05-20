@@ -5,9 +5,9 @@ import DetailsInfo from "./DetailsInfo";
 
 const DetailsCard = (props) => {
 
-  const { displayPosition, selected } = props;
+  const { displayPosition, selected, backgroundImg } = props;
   return (
-    <StyledDetailsCard displayPosition={displayPosition} selected={selected}>
+    <StyledDetailsCard displayPosition={displayPosition} selected={selected} backgroundImg = {backgroundImg}>
       <DetailsWrapper displayPosition={displayPosition}>
        <DetailsInfo/>
       </DetailsWrapper>

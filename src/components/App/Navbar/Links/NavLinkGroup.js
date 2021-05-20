@@ -11,6 +11,7 @@ const NavLinkGroup = styled.div`
         flex-direction: row;
         align-items: center;
         padding: 0;
+        border-bottom: none;
     }
 `
 export default NavLinkGroup;
