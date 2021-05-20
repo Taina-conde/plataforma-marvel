@@ -14,7 +14,7 @@ const StyledDetailsCard = styled(StyledCard)`
   position: absolute;
   top: 0;
   ${(props) => (props.displayPosition === 0 ? "left: 0;" : "right: 0;")}
-  ${(props) => props.selected && "z-index: 998;"}
+  ${(props) => props.selected && "z-index: 999;"}
 
 `;
 
