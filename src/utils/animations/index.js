@@ -17,3 +17,8 @@ export const translate = keyframes`
 60%  {top: ${positionTop}px; left: ${(positionLeft/3)}px;}
 100%  {top: ${positionTop/4}px; left: ${positionLeft/3}px;}
 `;
+
+export const fadeIn = keyframes`
+0%   {opacity: 0; }
+100%  {opacity: 1;}
+`

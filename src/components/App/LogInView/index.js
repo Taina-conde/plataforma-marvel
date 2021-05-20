@@ -34,8 +34,10 @@ const LogInView = () => {
   }
 
   return (
+    <>
+    <Logo animated />
     <StyledLogIn onSubmit={submitHandler}>
-      <Logo animated />
+      
       <Title>Bem-vindo(a) de volta!</Title>
       <Label>Acesse sua conta:</Label>
       <Input placeholder="Usuário" type="text" />
@@ -59,6 +61,7 @@ const LogInView = () => {
         <SecondaryButton cadastro>Cadastre-se</SecondaryButton>
       </Row>
     </StyledLogIn>
+    </>
   );
 };
 export default LogInView;
