@@ -12,20 +12,20 @@ const viewportWidth = Math.max(
 const positionTop = viewportHeight / 2;
 const positionLeft = viewportWidth / 2;
 
-const translateXYAnimation = keyframes`  
+const TranslateXYAnimation = keyframes`  
 0%   {top: ${positionTop}px; left: ${positionLeft}px;}
 20%   {top: ${positionTop}px; left: ${positionLeft}px;}
 50%  {top: ${positionTop}px; left: ${positionLeft / 3}px;}
 60%  {top: ${positionTop}px; left: ${positionLeft / 3}px;}
 100%  {top: ${positionTop / 4}px; left: ${positionLeft / 3}px;}
 `;
-const translateYAnimation = keyframes`  
+const TranslateYAnimation = keyframes`  
 0%   {top: ${positionTop}px; }
 25%   {top: ${positionTop}px; }
 100%  {top: ${positionTop/6}px;}
 `;
 const Translate = styled(BaseAnimation)`
-  animation-name: ${translateXYAnimation};
+  animation-name: ${TranslateXYAnimation};
   
 `;
 export default Translate;

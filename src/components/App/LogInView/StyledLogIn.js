@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
-import { fadeIn } from "../../../utils/animations";
+import { FadeInAnimation } from "../../animations/animations";
 
 const animation = props => css`
-  ${fadeIn} 2s ease 1.8s both
+  ${FadeInAnimation} 2s ease 1.8s both
 `
 
 const StyledLogIn = styled.form`
@@ -15,6 +15,7 @@ const StyledLogIn = styled.form`
  @media (min-width: 1024px) {
     margin-left: 65px;
     align-items: flex-start;
+    animation: ${animation};
  }
  
 `

@@ -36,9 +36,9 @@ const LogInView = () => {
 
   return (
     <>
-      <Translate duration = "0.8s">
-        <Logo />
-      </Translate>
+      
+        <Logo login />
+      
       <StyledLogIn onSubmit={submitHandler}>
         <Title>Bem-vindo(a) de volta!</Title>
         <Label>Acesse sua conta:</Label>

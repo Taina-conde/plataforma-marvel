@@ -1,10 +1,10 @@
 import RedRectangle from "./RedRectangle";
 
 
-const Logo = () => {
+const Logo = (props) => {
   return (
     
-      <RedRectangle>MARVEL</RedRectangle>
+      <RedRectangle login = {props.login}>MARVEL</RedRectangle>
     
   );
 };
