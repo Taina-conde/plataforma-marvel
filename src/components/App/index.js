@@ -11,23 +11,26 @@ import { handleReceiveFilmes } from "../../redux/actions/filmes";
 import { handleReceiveHqs } from "../../redux/actions/hqs";
 import { useDispatch } from "react-redux";
 import LogInView from "./LogInView";
+import { setLogged } from "../../redux/actions/log";
 
 function App() {
   const loggedIn = useSelector((state) => state.loggedIn);
   const rememberMe = localStorage.getItem("rememberMe") === "true";
 
   console.log("loggedIn", loggedIn);
+  console.log("rememberMe", rememberMe)
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(handleReceiveFilmes(data.filmes));
     dispatch(handleReceiveHqs(data.HQs));
     dispatch(handleReceivePersonagens(data.personagens));
+    dispatch(setLogged(rememberMe))
   }, [dispatch]);
 
   return (
     <Router>
-      {loggedIn || rememberMe ? (
+      {(loggedIn || rememberMe) ? (
         <>
           <Navbar />
           <Switch>
