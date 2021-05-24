@@ -14,7 +14,17 @@ const CardsList = (props) => {
   const { contentType } = props;
   const contentObj = useSelector((state) => state[contentType]);
 
-  const contentArr = Object.keys(contentObj);
+  let contentArr = Object.keys(contentObj);
+  if (contentType === "filmes" && filterBy === "lancamento") {
+    contentArr.sort(
+      (a, b) => contentObj[b].lancamento - contentObj[a].lancamento
+    );
+  } else if (contentType === "filmes" && filterBy === "cronologia") {
+    contentArr.sort(
+      (a, b) => contentObj[a].cronologia - contentObj[b].cronologia
+    );
+  }
+
   const nextHandler = () => {
     setStart(start + 1);
     setEnd(end + 1);
@@ -24,9 +34,18 @@ const CardsList = (props) => {
     setEnd(end - 1);
   };
 
+  const onSelectFilterHandler = (value) => {
+    setFilterBy(value);
+  };
+
   return (
     <>
-
+      {contentType === "filmes" && (
+        <Filter
+          filterBy={filterBy}
+          onSelectFilterHandler={onSelectFilterHandler}
+        />
+      )}
 
       <StyledWrapper>
         <BtnContainer>
