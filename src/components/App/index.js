@@ -33,7 +33,7 @@ function App() {
     dispatch(handleReceiveHqs(data.HQs));
     dispatch(handleReceivePersonagens(data.personagens));
     dispatch(setLogged(rememberMe));
-  }, [dispatch]);
+  }, [dispatch, rememberMe]);
 
   return (
     <Router>
