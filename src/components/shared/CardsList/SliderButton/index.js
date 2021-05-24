@@ -1,12 +1,14 @@
 import StyledSliderButton from "./StyledSliderButton";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
 const SliderButton = (props) => {
   return (
     <StyledSliderButton onClick={props.onClick}>
       {props.direction === "right" ? (
-        <FaArrowRight size={60} color="#FF0000" />
+        
+        <RiArrowDownSLine size={60} color="#FF0000" />
       ) : (
-        <FaArrowLeft size={60} color="#FF0000" />
+        
+        <RiArrowUpSLine size={60} color="#FF0000" />
       )}
     </StyledSliderButton>
   );
