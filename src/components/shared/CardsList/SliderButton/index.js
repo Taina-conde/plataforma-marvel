@@ -5,10 +5,10 @@ const SliderButton = (props) => {
     <StyledSliderButton onClick={props.onClick}>
       {props.direction === "right" ? (
         
-        <RiArrowDownSLine size={60} color="#FF0000" />
+        <RiArrowDownSLine size={80} color="#FF0000" />
       ) : (
         
-        <RiArrowUpSLine size={60} color="#FF0000" />
+        <RiArrowUpSLine size={80} color="#FF0000" />
       )}
     </StyledSliderButton>
   );
