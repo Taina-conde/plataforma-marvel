@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 const Filter = (props) => {
+    const selectHandler = (event) => {
+        props.onSelectFilterHandler(event.target.value);
+    }
     return (
-        <StyledSelect>
-            <option>Lançamento</option>
-            <option>Cronologia</option>
+        <StyledSelect value = {props.filterBy} onChange = {selectHandler}>
+            <option value = "">Filtrar por: </option>
+            <option value = "lancamento">Lançamento</option>
+            <option value = "cronologia">Cronologia</option>
         </StyledSelect>
     )
 }

@@ -15,7 +15,7 @@ const DetailsInfo = () => {
     nome = card.nome.split(":");
   }
   console.log("nome array", nome)
-  
+
   return (
     <>
       {nome.map( (item, index) => <DetailsTitle key = {index}>{(nome.length === 1 && index === 0) ? item : item + ": " }</DetailsTitle>)}
