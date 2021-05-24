@@ -45,7 +45,7 @@ const Card = (props) => {
         )}
       </Wrapper>
 
-      {showDetails && <Overlay onClick={() => clickHandler()} />}
+      {showDetails && <Overlay />} />}
     </>
   );
 };

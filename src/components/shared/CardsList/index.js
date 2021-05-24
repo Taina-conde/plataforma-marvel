@@ -6,9 +6,11 @@ import SliderButton from "./SliderButton";
 import BtnContainer from "./BtnContainer";
 import Filter from "./Filter";
 
-const Wrapper = (props) => {
+const CardsList = (props) => {
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(3);
+  const [filterBy, setFilterBy] = useState("");
+
   const { contentType } = props;
   const contentObj = useSelector((state) => state[contentType]);
 
@@ -52,4 +54,4 @@ const Wrapper = (props) => {
     </>
   );
 };
-export default Wrapper;
+export default CardsList;
