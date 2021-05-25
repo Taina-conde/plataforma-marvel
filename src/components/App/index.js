@@ -24,8 +24,6 @@ function App() {
   );
   const minHeight = viewportHeight - navbarHeight;
 
-  console.log("loggedIn", loggedIn);
-  console.log("rememberMe", rememberMe);
   const dispatch = useDispatch();
 
   useEffect(() => {
